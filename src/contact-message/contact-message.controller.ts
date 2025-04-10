@@ -1,4 +1,4 @@
-import { Body, Controller, Logger, Post } from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 import { ContactMessageService } from './contact-message.service';
 import { SendMessageDto } from './dto/send-message.dto';
 
@@ -8,7 +8,6 @@ export class ContactMessageController {
 
   @Post('/')
   async sendMessage(@Body() dto: SendMessageDto) {
-
     return await this.contactMessageService.sendMessage(dto);
   }
 }

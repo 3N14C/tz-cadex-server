@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
-import { ContactMessageModule } from './contact-message/contact-message.module';
 import { ConfigModule } from '@nestjs/config';
-import { ContactEmailModule } from './contact-email/contact-email.module';
+import { ContactMessageModule } from './contact-message/contact-message.module';
 
 @Module({
   imports: [
@@ -9,7 +8,6 @@ import { ContactEmailModule } from './contact-email/contact-email.module';
       isGlobal: true,
     }),
     ContactMessageModule,
-    ContactEmailModule,
   ],
 })
 export class AppModule {}
